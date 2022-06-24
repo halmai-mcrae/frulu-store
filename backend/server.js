@@ -9,3 +9,7 @@ const app = express()
 const PORT = process.env.PORT || 8000
 
 app.listen(PORT, () => console.log('Server is running on port ' + PORT))
+
+//TO DO:SET UP PRODUCT MODEL
+//DATA IMPORT SCRIPT
+//ROUTES AND CONTROLLERS
