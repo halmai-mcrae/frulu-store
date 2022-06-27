@@ -13,6 +13,7 @@ const Navbar = () => {
         <li>
           <Link to="/cart">
             {/* icon */}
+            <i className="fas fa-shopping-cart"></i>
             Cart
             <span className="cartlogo__badge">0</span>
           </Link>
