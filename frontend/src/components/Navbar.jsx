@@ -11,11 +11,13 @@ const Navbar = () => {
       {/* links */}
       <ul className="navbar__links">
         <li>
-          <Link to="/cart">
+          <Link to="/cart" className='cartlink'>
             {/* icon */}
             <i className="fas fa-shopping-cart"></i>
+            <span>
             Cart
             <span className="cartlogo__badge">0</span>
+            </span>
           </Link>
         </li>
         <li>
@@ -23,10 +25,11 @@ const Navbar = () => {
         </li>
       </ul>
       {/* hamburger menu */}
-      <div className="hamburgermenu"></div>
+      <div className="hamburgermenu">
       <div></div>
       <div></div>
       <div></div>
+      </div>
     </nav>
   )
 }

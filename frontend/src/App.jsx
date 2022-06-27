@@ -6,17 +6,18 @@ import ProductScreen from './screens/ProductScreen'
 import CartScreen from './screens/CartScreen'
 //Components
 import Navbar from './components/Navbar'
+
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-        Hello World - FruitMe
+        FruitMe
         <main>
           <Routes>
-            <Route exact path="/" component={HomeScreen} />
-            <Route path="/product/:id" component={ProductScreen} />
-            <Route path="/cart" component={CartScreen} />
+            <Route path="/" element={ <HomeScreen />} />
+            <Route path="/product/:id" element={ <ProductScreen /> } />
+            <Route path="/cart" element={ <CartScreen />} />
           </Routes>
         </main>
       </Router>
@@ -27,9 +28,9 @@ function App() {
 export default App
 
 //ToDo:
-//Navbar
+//Navbar - done
 //SideDrawer
 //Backdrop
 //HomeScreen
 //ProductScreen
-//CartScreen
+//CartScreen - in progress
