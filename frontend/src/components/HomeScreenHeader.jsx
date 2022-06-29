@@ -11,10 +11,6 @@ const HomeScreenHeader = () => {
     <h3>
       Try one of each, or indulge with a favourite.
       </h3>
-    <div className="homescreen-header__products">
-
-
-    </div>
   </div>
   </div>
   </>
