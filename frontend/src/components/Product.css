@@ -10,17 +10,19 @@
 }
 
 .product img {
-  border-radius: 8px;
-  height: fit-content;
+  width:  235px;
+  height: 235px;
+  background-size: cover;
 }
+
 
 .product__info {
   margin-bottom: 8px;
 }
 
-.info__price {
+/* .info__price {
   font-weight: bold;
-}
+} */
 
 .info__name {
   font-size: 1rem;
@@ -38,6 +40,12 @@
   width: 100%;
   text-decoration: none;
   text-align: center;
-  background-color: rgb(0, 0, 0);
-  color: #fff;
+  background: #F3AEA6;
+  color: #171717;
+  border-radius: 6px;
+}
+
+.info__button:hover {
+  background: #F3AEA6;
+  color: #fff
 }
