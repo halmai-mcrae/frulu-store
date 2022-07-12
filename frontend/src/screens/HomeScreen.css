@@ -10,8 +10,14 @@
   justify-content: center;
   height: 100vh;
   font-size: 1.5rem;
-  color: #171717;
+  color: #33383b;
   margin-bottom: 1rem;
+}
+
+.homescreen__title span {
+  color: #ef6351;
+  opacity: 1;
+  animation: flickerI 10s linear  reverse infinite;
 }
 
 .homescreen__products {

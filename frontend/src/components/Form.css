@@ -1,0 +1,67 @@
+/* The contact form */
+
+.form{
+	display: inline-block;
+}
+
+.form input,
+.form textarea{
+	display: block;
+	border-radius: 3px;
+	box-sizing: border-box;
+	background-color:  rgb(249, 248, 245);
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+	border: none;
+	resize: none;
+
+	font: inherit;
+	font-size: 14px;
+	font-weight: normal;
+	color:  #33383b;
+
+	width: 400px;
+	padding: 18px;
+}
+
+.form ::-webkit-input-placeholder {
+	color:  #5c666b;
+}
+
+.form :-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.form :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.form button{
+	border-radius: 3px;
+	background-color:  #33383b;
+	color: rgb(249, 248, 245);
+	border: 0;
+	padding: 15px 50px;
+  font-size: 1.2rem;
+  float: inherit;
+}
+
+.form span{
+  display: none;
+  text-align: center;
+}
+/* 
+.form span .onClick {
+  display: block;
+} */

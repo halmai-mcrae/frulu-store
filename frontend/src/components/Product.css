@@ -1,7 +1,8 @@
 .product {
   width: 250px;
-  padding: 0.5rem;
-  background-color: #fff;
+  padding: 1rem;
+  padding-bottom:5rem;
+  background-color: rgb(249, 248, 245);;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -13,16 +14,14 @@
   width:  235px;
   height: 235px;
   background-size: cover;
+  border-radius: 3px;
 }
 
 
 .product__info {
   margin-bottom: 8px;
+  color: #33383b;
 }
-
-/* .info__price {
-  font-weight: bold;
-} */
 
 .info__name {
   font-size: 1rem;
@@ -41,8 +40,8 @@
   text-decoration: none;
   text-align: center;
   background: #F3AEA6;
-  color: #171717;
-  border-radius: 6px;
+  color: #33383b;
+  border-radius: 3px;
 }
 
 .info__button:hover {

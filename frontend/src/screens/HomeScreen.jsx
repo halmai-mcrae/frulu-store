@@ -1,3 +1,4 @@
+import Footer from '../components/Footer'
 import HomeScreenHeader from '../components/HomeScreenHeader'
 import Product from '../components/Product'
 import './HomeScreen.css'
@@ -9,7 +10,7 @@ const HomeScreen = () => {
         <HomeScreenHeader />
       <h2 className="homescreen__title">
       ONE INGREDIENT.
-      <span style={{ color: "#E97D71" }}>ONE INCREDIBLY FRESH IDEA.</span>   
+      <span>ONE INCREDIBLY FRESH IDEA.</span>   
       </h2>
       <div className="background1">
       <h2 className="homescreen__title">
@@ -27,6 +28,12 @@ const HomeScreen = () => {
       <div className="homescreen__products">
       <Product />
       </div>
+      <h2 className="homescreen__title">
+    Snack better.
+      </h2>
+      <h2 className='flicker'>We’re taking snack-time back to
+      it's roots with <span>perfectly ripe fruit</span> bursting with flavor.</h2>
+      <Footer />
     </div>
   </>
 )}

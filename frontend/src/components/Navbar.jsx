@@ -6,8 +6,25 @@ const Navbar = ({click}) => {
     <nav className="navbar">
       {/* logo */}
       <div className="navbar__logo">
-        <h2>Frulu Cart</h2>
+        <Link to="/">
+        <h3>Frulu<span>Store</span><span className="symbol">®</span></h3>
+        </Link>
+        <p>
+					<a href="/">Home</a>
+					|
+					<a href="https://github.com/halmai-mcrae">Design</a>
+          |
+					<a href="/">About</a>
+					|
+					<a href="/">FAQ'S</a>
+					|
+					<a href="/">Cart</a>
+				</p>
       </div>
+      <div className="welcome-note"> 
+        <h4>Welcome, Fruit Lovers.</h4>
+        <h5>You found us.</h5>
+        </div>
       {/* links */}
       <ul className="navbar__links">
         <li>
@@ -21,7 +38,7 @@ const Navbar = ({click}) => {
           </Link>
         </li>
         <li>
-          <Link to="/">Shop</Link>
+          <Link to="/">Store</Link>
         </li>
       </ul>
       {/* hamburger menu */}
