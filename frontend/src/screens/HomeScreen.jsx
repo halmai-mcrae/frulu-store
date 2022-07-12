@@ -10,7 +10,9 @@ const HomeScreen = () => {
         <HomeScreenHeader />
       <h2 className="homescreen__title">
       ONE INGREDIENT.
-      <span>ONE INCREDIBLY FRESH IDEA.</span>   
+      <span>
+        ONE INCREDIBLY FRESH IDEA.
+        </span>   
       </h2>
       <div className="background1">
       <h2 className="homescreen__title">
@@ -26,6 +28,8 @@ const HomeScreen = () => {
     Bestsellers.
       </h2>
       <div className="homescreen__products">
+      <Product />
+      <Product />
       <Product />
       </div>
       <h2 className="homescreen__title">

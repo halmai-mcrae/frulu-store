@@ -65,3 +65,40 @@
 .form span .onClick {
   display: block;
 } */
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.form {
+		font: bold 14px sans-serif;
+	}
+
+	.form{
+		font-size: 12px;
+	}
+
+	.form input,
+	.form textarea{
+		width: 250px;
+	}
+
+	.form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.form{
+		float: none;
+		margin-bottom: 40px;
+		margin-top: 30px;
+		display: block;
+	}
+
+	.form button{
+		float: none;
+	}
+}

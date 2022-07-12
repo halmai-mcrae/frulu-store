@@ -38,3 +38,22 @@
   background-position: center;
   background-repeat: repeat;
 }
+
+@media (max-width: 1232px) {
+  .homescreen__products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+@media (max-width: 900px) {
+  .homescreen__products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .homescreen__products {
+    grid-template-columns: repeat(1fr);
+  }
+}

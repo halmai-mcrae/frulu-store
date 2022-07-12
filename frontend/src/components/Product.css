@@ -48,3 +48,21 @@
   background: #F3AEA6;
   color: #fff
 }
+
+@media (max-width: 1232px) {
+  .product {
+    width: 280px;
+  }
+}
+
+@media (max-width: 1115px) {
+  .product {
+    width: 265px;
+  }
+}
+
+@media (max-width: 1028px) {
+  .product {
+    width: 250px;
+  }
+}
