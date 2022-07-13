@@ -10,15 +10,11 @@ const Navbar = ({click}) => {
         <h3>Frulu<span>Store</span><span className="symbol">®</span></h3>
         </Link>
         <p>
-					<a href="/">Home</a>
-					|
 					<a href="https://github.com/halmai-mcrae">Design</a>
           |
 					<a href="/">About</a>
 					|
 					<a href="/">FAQ'S</a>
-					|
-					<a href="/">Cart</a>
 				</p>
       </div>
       <div className="welcome-note"> 
