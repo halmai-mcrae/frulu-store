@@ -11,10 +11,10 @@
 
 .navbar__logo h3 {
     text-decoration: none !important;
-    color: rgb(249, 248, 245);
+    color: rgb(240, 236, 224);
     font-size: 1.4rem;
     font: 45px 'Roboto', sans-serif;
-    margin: 0 0 10px;
+    margin: 0 0 0.5rem 0;
 }
 
 .navbar__logo h3 span{
@@ -22,7 +22,7 @@
 }
 
 .navbar__logo h3 span.symbol {
-  color: rgb(249, 248, 245);
+  color: rgb(240, 236, 224);
   font-size: 20px;
 }
 .navbar__logo a {
@@ -37,11 +37,7 @@
   text-align: center;
 	opacity: 2;
 	animation: flickerI 10s linear  reverse infinite;
-}
-
-.welcome-note h5 {
-  color: #5c666b;
-  font-weight: normal;
+  
 }
 
 .navbar__links {
@@ -94,6 +90,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  color: #33383b;
 }
 
 .hamburgermenu div {

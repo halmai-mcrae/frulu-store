@@ -1,6 +1,7 @@
 import Footer from '../components/Footer'
 import HomeScreenHeader from '../components/HomeScreenHeader'
 import Product from '../components/Product'
+import Slider from '../components/Slider'
 import './HomeScreen.css'
 
 const HomeScreen = () => {
@@ -16,7 +17,7 @@ const HomeScreen = () => {
       </h2>
       <div className="background1">
       <h2 className="homescreen__title">
-    An entirely new, revolutionary snack — made of fruit.
+    An entirely new snack — made of fruit.
       </h2>
       </div>
       <div className="background2">
@@ -24,6 +25,7 @@ const HomeScreen = () => {
     Try one of each, or  indulge with your favourite.
       </h2>
       </div>
+      <Slider />
       <h2 className="homescreen__title">
     Bestsellers.
       </h2>

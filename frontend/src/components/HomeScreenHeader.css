@@ -1,5 +1,5 @@
 .homescreen-header {
-  max-width: 1300px;
+  max-width: 1400px;
   height: 100vh;
   margin: 1rem auto;
 }
@@ -24,6 +24,7 @@ h3 {
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
+  margin-top: -20px;
 }
 
 .flicker span {

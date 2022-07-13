@@ -9,18 +9,10 @@ const Navbar = ({click}) => {
         <Link to="/">
         <h3>Frulu<span>Store</span><span className="symbol">®</span></h3>
         </Link>
-        <p>
-					<a href="https://github.com/halmai-mcrae">Design</a>
-          |
-					<a href="/">About</a>
-					|
-					<a href="/">FAQ'S</a>
-				</p>
-      </div>
-      <div className="welcome-note"> 
-        <h4>Welcome, Fruit Lovers.</h4>
-        <h5>You found us.</h5>
+        <div className="welcome-note"> 
+        <h4>We welcome fruit lovers.</h4>
         </div>
+      </div>
       {/* links */}
       <ul className="navbar__links">
         <li>

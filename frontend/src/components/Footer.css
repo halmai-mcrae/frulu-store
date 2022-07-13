@@ -7,7 +7,6 @@
 	text-align: left;
 	padding: 50px 60px 40px;
 	overflow: hidden;
-  z-index: 50;
 }
 
 
@@ -16,10 +15,8 @@ section {
   width: 100%;
   display: inline-block;
   color: rgb(249, 248, 245);
-  height: 60vh;
   text-align: center;
   font-size: 22px;
-  font-weight: 700;
   text-decoration: underline;
 }
 
@@ -35,7 +32,7 @@ section {
 
 .footer-distributed h3{
   text-decoration: none !important;
-  color: rgb(249, 248, 245);
+  color: rgb(240, 236, 224);
   font-size: 1.4rem;
 	font: 45px 'Roboto', sans-serif;
 	margin: 10px;
@@ -46,7 +43,7 @@ section {
 }
 
 .footer-distributed h3 span.symbol {
-  color: rgb(249, 248, 245);
+  color: rgb(240, 236, 224);
   font-size: 20px;
 }
 
