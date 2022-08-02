@@ -26,7 +26,7 @@ const Navbar = ({click}) => {
           </Link>
         </li>
         <li>
-          <Link to="/">Store</Link>
+          <Link to="/">Shop</Link>
         </li>
       </ul>
       {/* hamburger menu */}

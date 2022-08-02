@@ -1,7 +1,7 @@
 import Footer from '../components/Footer'
 import './ProductScreen.css'
 
-const ProductScreen = () => {
+const ProductScreen = (click) => {
   return (
   <div className="productscreen">
     <div className="productscreen__left">
@@ -12,6 +12,8 @@ const ProductScreen = () => {
 
         <div className="left__info">
           <p className="left__name">Watermelon | Merangi</p>
+          <p>$1.99</p>
+          <p>You know what it is.</p>
         </div>
 
     </div>
@@ -33,10 +35,17 @@ const ProductScreen = () => {
           <option value="5">100</option>
         </select>
         </p>
+        <p>
+          <button type="button" onClick={click}>
+                  Add To Cart
+          </button>
+        </p>
       </div>
       
       </div>
+      <div>
       <Footer />
+      </div>
   </div>
 )}
 
