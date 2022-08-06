@@ -10,15 +10,7 @@ const Footer = ({show, click}) => {
 				<h3>Frulu<span>Store</span><span className="symbol">®</span></h3>
 
 				<p className="footer-links">
-					<a href="/">Home</a>
-					|
-					<a href="https://github.com/halmai-mcrae">Design</a>
-          |
-					<a href="/">About</a>
-					|
-					<a href="/">FAQ'S</a>
-					|
-					<a href="/">Cart</a>
+
 				</p>
 
 				<p className="footer-company-name">Frulu Aotearoa © 2022</p>

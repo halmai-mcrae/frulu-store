@@ -137,6 +137,7 @@ section {
 
 	.footer-distributed{
 		padding: 30px;
+    align-items: center;
 	}
 
 	.footer-distributed .footer-left,
@@ -159,7 +160,6 @@ section {
 	}
 
 	.footer-distributed form button{
-		float: none;
     align-items: center;
 	}
 }

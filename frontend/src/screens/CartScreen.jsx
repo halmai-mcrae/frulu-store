@@ -6,12 +6,12 @@ import CartItem from '../components/CartItem'
 const CartScreen = () => {
   return (
   <div className="cartscreen">
-    <div className="cartscreen-left">
+    <div className="cartscreen__left">
     <CartItem />
     </div>
-    <div className="cartscreen-right">
-      <div className="cartscreen-info">
-        <p>(0) items</p>
+    <div className="cartscreen__right">
+      <div className="cartscreen__info">
+        <p>You have (0) items</p>
         <p>$1.99</p>
         </div>
         <div>
