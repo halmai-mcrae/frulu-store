@@ -1,7 +1,8 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Footer from '../components/Footer'
 import './ProductScreen.css'
 
-const ProductScreen = (click) => {
+const ProductScreen = ({handleClick}) => {
   return (
   <div className="productscreen">
     <div className="productscreen__left">
@@ -23,7 +24,7 @@ const ProductScreen = (click) => {
           Price: <span>$1.99</span>
         </p>
         <p>
-          In stock: <span><i class="fa-solid fa-check"></i></span>
+          In stock: <span><FontAwesomeIcon icon="fa-solid fa-check" /></span>
         </p>
         <p>
           Quantity:
@@ -36,7 +37,7 @@ const ProductScreen = (click) => {
         </select>
         </p>
         <p>
-          <button type="button" onClick={click}>
+          <button type="button" onClick={handleClick}>
                   Add To Cart
           </button>
         </p>
