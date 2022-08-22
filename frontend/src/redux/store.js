@@ -6,14 +6,17 @@ import {
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 
+// Reducers
+import { cartReducer } from './reducers/cartReducers'
+
 const reducer = combineReducers({
-  // reducers go here
+  cart: cartReducer,
 })
 
 const middleware = [thunk]
 
 const store = configureStore(
-  reducer,
+  { reducer },
   composeWithDevTools(applyMiddleware(...middleware))
 )
 
