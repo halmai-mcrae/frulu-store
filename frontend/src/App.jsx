@@ -32,11 +32,3 @@ function App() {
 }
 
 export default App
-
-//ToDo:
-//Navbar - done
-//SideDrawer - in progress
-//Backdrop - done
-//HomeScreen
-//ProductScreen
-//CartScreen - done
