@@ -45,7 +45,14 @@ const HomeScreen = () => {
     Bestsellers.
       </h2>
       <div className="homescreen__products">
-        {loading ? <div>Loading...</div> : error ? <div>{error}</div> : products.map(product => <Product key={product._id} product={product} />)}
+        {loading ? <div>Loading...</div> : error ? <div>{error}</div> : products.map(product => <Product
+            key={product._id}
+            productId={product._id}
+            name={product.name}
+            description={product.description}
+            price={product.price}
+            imageUrl={product.imageUrl}
+            />)}
       </div>
       <h2 className="homescreen__title">
     Snack better.

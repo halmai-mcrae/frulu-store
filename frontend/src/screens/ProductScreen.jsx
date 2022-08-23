@@ -1,53 +1,87 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Footer from '../components/Footer'
 import './ProductScreen.css'
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from "react-redux";
 
-const ProductScreen = ({handleClick}) => {
+// Actions
+import { getProductsDetails } from "../redux/actions/productActions";
+import { addToCart } from "../redux/actions/cartActions";
+
+// Components 
+import Footer from '../components/Footer'
+
+const ProductScreen = () => {
+  const { id } = useParams();
+  const [qty, setQty] = useState(1);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const productDetails = useSelector((state) => state.getProductDetails);
+  const { loading, error, product } = productDetails;
+
+  useEffect((id) => {
+    if (product && id !== product._id) {
+      dispatch(getProductsDetails(id));
+    }
+  }, [dispatch, product, id]);
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(product._id, qty));
+    navigate.push(`/cart`);
+  };
+
   return (
   <div className="productscreen">
+          { loading ? (
+        <h2>Loading...</h2>
+      ) : error ? (
+        <h2>{error}</h2>
+      ) : (
+        <>
     <div className="productscreen__left">
-      <div className="left__image">
-      <img src="https://images.unsplash.com/photo-1595475207225-428b62bda831?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80"
-        alt="Bananas"/>
-        </div>
-
-        <div className="left__info">
-          <p className="left__name">Watermelon | Merangi</p>
-          <p>$1.99</p>
-          <p>You know what it is.</p>
-        </div>
-
-    </div>
-    <div className="productscreen__right">
-      <div className="right__info">
-        <p>
-          Price: <span>$1.99</span>
-        </p>
-        <p>
-          In stock: <span><FontAwesomeIcon icon="fa-solid fa-check" /></span>
-        </p>
-        <p>
-          Quantity:
-        <select>
-          <option value="1">6</option>
-          <option value="2">12</option>
-          <option value="3">24</option>
-          <option value="4">48</option>
-          <option value="5">100</option>
-        </select>
-        </p>
-        <p>
-          <button type="button" onClick={handleClick}>
+    <div className="left__image">
+              <img src={product.imageUrl} alt={product.name} />
+            </div>
+            <div className="left__info">
+              <p className="left__name">{product.name}</p>
+              <p>Price: ${product.price}</p>
+              <p>Description: {product.description}</p>
+            </div>
+          </div>
+          <div className="productscreen__right">
+            <div className="right__info">
+              <p>
+                Price:
+                <span>${product.price}</span>
+              </p>
+              <p>
+                Status:
+                <span>
+                  {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                </span>
+              </p>
+              <p>
+                Qty
+                <select value={qty} onChange={(e) => setQty(e.target.value)}>
+                  {[...Array(product.countInStock).keys()].map((x) => (
+                    <option key={x + 1} value={x + 1}>
+                      {x + 1}
+                    </option>
+                  ))}
+                </select>
+              </p>
+              <p>
+                <button type="button" onClick={addToCartHandler}>
                   Add To Cart
-          </button>
-        </p>
-      </div>
-      
-      </div>
-      <div>
+                </button>
+              </p>
+            </div>
       <Footer />
       </div>
-  </div>
+      </>
 )}
+</div>
+  )}
+
 
 export default ProductScreen
