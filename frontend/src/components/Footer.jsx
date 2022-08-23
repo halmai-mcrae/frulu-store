@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Form from './Form'
 import './Footer.css';
 
@@ -16,10 +17,10 @@ const Footer = ({show, click}) => {
 				<p className="footer-company-name">Frulu Aotearoa © 2022</p>
 
 				<div className="footer-icons">
-					<a href="https://medium.com/@halmaimcrae"><i class="fa-brands fa-medium"></i></a>
-					<a href="/"><i class="fa-brands fa-twitter" /></a>
-					<a href="https://www.linkedin.com/in/halmai-mcrae/"><i class="fa-brands fa-linkedin"></i></a>
-					<a href="https://github.com/halmai-mcrae"><i class="fa-brands fa-github"></i></a>
+					<a href="https://medium.com/@halmaimcrae"><FontAwesomeIcon icon="fa-brands fa-medium" /></a>
+					<a href="/"><FontAwesomeIcon icon="fa-brands fa-twitter" /></a>
+					<a href="https://www.linkedin.com/in/halmai-mcrae/"><FontAwesomeIcon icon="fa-brands fa-linkedin" /></a>
+					<a href="https://github.com/halmai-mcrae"><FontAwesomeIcon icon="fa-brands fa-github" /></a>
           </div>
 	</div>
 

@@ -38,7 +38,7 @@ const Form = () => {
           <input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
           <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
           <textarea placeholder="Message" value={message} onChange={e => setMessage(e.target.value)}></textarea>
-          <button class onClick={submit}>Send</button>
+          <button onClick={submit}>Send</button>
 
           <span className={emailSent ? "visible" : null}>Message sent, we will be in touch!</span>
       </div>

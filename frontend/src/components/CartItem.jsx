@@ -1,6 +1,7 @@
-import './CartItem.css';
+import './CartItem.css'
 
-import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom'
 
 const CartItem = () => {
   return (
@@ -22,7 +23,9 @@ const CartItem = () => {
           </select>
 
         <button className="cartitem__remove-button">
-        <i className="fas fa-trash"></i>
+          <div>
+          <FontAwesomeIcon icon="fa-fas fa-trash" />
+          </div>
         </button>
       
 

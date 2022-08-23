@@ -1,10 +1,25 @@
+import './HomeScreen.css'
+import { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+// Components
 import Footer from '../components/Footer'
 import HomeScreenHeader from '../components/HomeScreenHeader'
 import Product from '../components/Product'
 import Slider from '../components/Slider'
-import './HomeScreen.css'
+// Actions
+import { getProducts as listProducts } from '../redux/actions/productActions'
+
 
 const HomeScreen = () => {
+
+  const dispatch = useDispatch()
+  const getProducts = useSelector(state => state.getProducts)
+  const { products, loading, error } = getProducts
+
+  useEffect(() => {
+    dispatch(listProducts())
+  } , [dispatch])
+
   return (
     <>
       <div className="homescreen">
@@ -30,9 +45,7 @@ const HomeScreen = () => {
     Bestsellers.
       </h2>
       <div className="homescreen__products">
-      <Product />
-      <Product />
-      <Product />
+        {loading ? <div>Loading...</div> : error ? <div>{error}</div> : products.map(product => <Product key={product._id} product={product} />)}
       </div>
       <h2 className="homescreen__title">
     Snack better.
