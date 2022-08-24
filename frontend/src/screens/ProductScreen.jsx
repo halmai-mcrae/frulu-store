@@ -1,34 +1,36 @@
+
 import './ProductScreen.css'
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 
 // Actions
-import { getProductsDetails } from "../redux/actions/productActions";
+import { getProductDetails } from "../redux/actions/productActions";
 import { addToCart } from "../redux/actions/cartActions";
 
 // Components 
 import Footer from '../components/Footer'
 
-const ProductScreen = () => {
-  const { id } = useParams();
+const ProductScreen = (id) => {
   const [qty, setQty] = useState(1);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const productDetails = useSelector((state) => state.getProductDetails);
-  const { loading, error, product } = productDetails;
+  const { loading, error, product } = productDetails
 
   useEffect((id) => {
-    if (product && id !== product._id) {
-      dispatch(getProductsDetails(id));
+    if (product && id === product._id) { 
+      dispatch(getProductDetails(id));
     }
-  }, [dispatch, product, id]);
+  }, [dispatch, product, id])
 
   const addToCartHandler = () => {
-    dispatch(addToCart(product._id, qty));
-    navigate.push(`/cart`);
+    dispatch(addToCart(product._id, qty))
+    navigate('/cart')
   };
+
+
 
   return (
   <div className="productscreen">
