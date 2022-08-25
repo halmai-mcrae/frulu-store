@@ -1,7 +1,6 @@
-
 import './ProductScreen.css'
 import { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 
 // Actions
@@ -11,61 +10,65 @@ import { addToCart } from "../redux/actions/cartActions";
 // Components 
 import Footer from '../components/Footer'
 
-const ProductScreen = (id) => {
+const ProductScreen = () => {
+  const { id, name, imageUrl, description, price, countInStock } = useParams();
   const [qty, setQty] = useState(1);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const productDetails = useSelector((state) => state.getProductDetails);
-  const { loading, error, product } = productDetails
+  // const productDetails = 
+  useSelector((state) => state.getProductDetails);
+  // const { loading, error, product } = productDetails
+  
 
-  useEffect((id) => {
-    if (product && id === product._id) { 
-      dispatch(getProductDetails(id));
-    }
-  }, [dispatch, product, id])
+  useEffect(() => {
+    dispatch(getProductDetails(id));
+  }, [dispatch, id]);
 
   const addToCartHandler = () => {
-    dispatch(addToCart(product._id, qty))
+    dispatch(addToCart(id, qty))
     navigate('/cart')
   };
+
+  console.log(id)
+  console.log(name)
 
 
 
   return (
   <div className="productscreen">
-          { loading ? (
+          {/* { loading ? (
         <h2>Loading...</h2>
       ) : error ? (
         <h2>{error}</h2>
-      ) : (
+      ) : ( */}
         <>
     <div className="productscreen__left">
     <div className="left__image">
-              <img src={product.imageUrl} alt={product.name} />
+              <img src={imageUrl} alt={name} />
             </div>
             <div className="left__info">
-              <p className="left__name">{product.name}</p>
-              <p>Price: ${product.price}</p>
-              <p>Description: {product.description}</p>
+              <p className="left__name">{name}</p>
+              <p>Price: ${price}</p>
+              <p>Description: {description}</p>
             </div>
           </div>
           <div className="productscreen__right">
             <div className="right__info">
               <p>
                 Price:
-                <span>${product.price}</span>
+                <span>${price}</span>
               </p>
               <p>
                 Status:
                 <span>
-                  {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                  {countInStock > 0 ? "In Stock" : "Out of Stock"}
                 </span>
               </p>
               <p>
                 Qty
                 <select value={qty} onChange={(e) => setQty(e.target.value)}>
-                  {[...Array(product.countInStock).keys()].map((x) => (
+                  {[...Array(countInStock).keys()].map((x) => (
                     <option key={x + 1} value={x + 1}>
                       {x + 1}
                     </option>
@@ -81,7 +84,6 @@ const ProductScreen = (id) => {
       <Footer />
       </div>
       </>
-)}
 </div>
   )}
 
