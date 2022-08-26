@@ -2,16 +2,21 @@
   max-width: 1500px;
   font-weight: bold;
   color: #33383b;
-}
 
+}
+img{
+  height: auto; 
+  width: auto; 
+  max-width: 300px; 
+  max-height: 300px;
+}
 .productscreen__left {
   display: column;
-  flex: 0.8;
 }
 
 .left__image {
+  margin: 1rem;
   flex: 0.6;
-  align-items: center;
 }
 
 .left__info {
@@ -44,8 +49,8 @@
 }
 
 .right__info {
-  width: 450px;
-  margin: 1rem;
+  margin: 2rem;
+  width: auto;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
@@ -65,10 +70,12 @@
   color: rgb(249, 248, 245);
   border: 1px solid #171717;
   border-radius: 3px;
+  
 }
 
 .right__info select {
   padding: 10px 16px;
+  width: 30%;
 }
 
 @media (max-width: 960px) {
